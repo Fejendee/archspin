@@ -1,11 +1,10 @@
-#!/usr/bin/env python3
+# Version 1.0 creada por Fejendee :)
 
 import argparse
 import math
 import shutil
 import sys
 import time
-
 
 LOGO = [
     "                   -`",
@@ -29,7 +28,6 @@ LOGO = [
     ".`                                 `/",
 ]
 
-
 COLORS = {
     "black": "\033[30m",
     "red": "\033[31m",
@@ -52,11 +50,11 @@ def rotate_logo(angle):
     for line in LOGO:
         output = [" "] * width
 
-        for x, char in enumerate(line):
+        for input, char in enumerate(line):
             if char == " ":
                 continue
 
-            distance = x - center
+            distance = input - center
             new_x = round(center + distance * scale)
 
             if 0 <= new_x < width:
